@@ -1,0 +1,112 @@
+body {
+  background-color: #212121;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin: 30px auto 0;
+  padding: 0;
+}
+
+.divider {
+  background-color: #ff5722;
+  width: 70px;
+  height: 3px;
+  margin: 0 auto 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+}
+
+.reset {
+  background-color: #ff5722;
+  border: 1px solid #ff5722;
+  border-radius: 5px;
+  padding: 14px 16px;
+  color: #fff;
+  -webkit-transition: .5s;
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.reset:hover {
+  color: #fff;
+  background-color: #ab003c;
+  border-color: #ab003c;
+}
+
+.slidecontainer {
+  width: 50%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 50%;
+  /* Full-width */
+  height: 27px;
+  /* Specified height */
+  background: #fff;
+  /* Grey background */
+  border-radius: 5px;
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  margin: auto;
+  text-align: center;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #ff5722;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #ff5722;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+span {
+  color: #ff5722;
+}
+/*# sourceMappingURL=main.css.map */

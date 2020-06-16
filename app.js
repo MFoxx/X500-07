@@ -13,13 +13,17 @@ server.listen(8080);
 // Register the index route of your app that returns the HTML file
 app.get('/', function (req, res) {
     console.log("Homepage");
-    res.sendFile(__dirname + '/main.html');
+    res.sendFile(__dirname + '/app/main.html');
 });
 
 app.get('/index.js', function (req, res) {
     console.log("Homepage");
-    res.sendFile(__dirname + '/index.js');
+    res.sendFile(__dirname + '/app/index.js');
 });
+
+app.get('/css/main.css', (req, res)=> {
+    res.sendFile(__dirname + '/app/css/main.css')
+})
 
 // Expose the node_modules folder as static resources (to access socket.io.js in the browser)
 app.use('/static', express.static('node_modules'));
@@ -50,6 +54,9 @@ board.on("ready", () => {
 
         socket.on('inputRameno01', (x)=> {
             rameno01.to(x);
+        })
+        socket.on('resetRameno01', ()=> {
+            rameno01.to(90);
         })
     })
 });
