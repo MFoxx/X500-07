@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css"  type="text/css">
+</head>
+<body>
+    <!-- PODSTAVA -->
+    <h1>Ovladanie podstavy: <span id="podstavaValue">90</span>°</h1>
+    <button id='resetPodstava'>Reset</button>
+    <input type="range" name="podstava" id="podstava" min=0 max=180>
+
+    <!-- RAMENO 1 -->
+    <h1>Ovladanie ramena 1:  <span id="rameno1Value">90</span>°</h1>
+    <input type="range" name="rameno1" id="rameno1" min=0 max=180>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src='index.js'></script>
+    
+</body>
+</html>
