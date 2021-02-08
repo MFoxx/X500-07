@@ -1,33 +1,32 @@
-const podstava = document.getElementById("podstava");
-const podstavaValue = document.getElementById("podstavaValue");
-const podstavaReset = document.getElementById('resetPodstava');
-const rameno1 = document.getElementById('rameno1');
-const rameno1Value = document.getElementById('rameno1Value');
-const remeno1Reset = document.getElementById('resetRameno01')
-        
+const base = document.getElementById('podstava');
+const baseValue = document.getElementById('podstavaValue');
+const baseReset = document.getElementById('resetPodstava');
+const hand01 = document.getElementById('rameno1');
+const hand01Value = document.getElementById('rameno1Value');
+const hand01Reset = document.getElementById('resetRameno01');
 
-let socket  = io.connect('http://localhost:8080');
+let socket = io.connect('http://localhost:8080');
 
-podstava.addEventListener('input', ()=> {  
-    let x = podstava.value;
-    podstavaValue.innerHTML = x;
-    socket.emit('inputPodstava', x);
-})
+base.addEventListener('input', () => {
+	let x = base.value;
+	baseValue.innerHTML = x;
+	socket.emit('inputBase', x);
+});
 
-podstavaReset.addEventListener('click', () => {
-    socket.emit('resetPodstava');
-    podstavaValue.innerHTML = '90';
-    podstava.value = 90;
-})
+baseReset.addEventListener('click', () => {
+	socket.emit('resetBase');
+	baseValue.innerHTML = '90';
+	base.value = 90;
+});
 
-rameno1.addEventListener('input', ()=>{
-    let x = rameno1.value;
-    socket.emit('inputRameno01', x);
-    rameno1Value.innerHTML = x;
-})
+hand01.addEventListener('input', () => {
+	let x = hand01.value;
+	socket.emit('inputHand01', x);
+	hand01Value.innerHTML = x;
+});
 
-remeno1Reset.addEventListener('click', ()=>{
-    socket.emit('resetRameno01');
-    rameno1Value.innerHTML = '90';
-    rameno1.value = 90;
-})
+hand01Reset.addEventListener('click', () => {
+	socket.emit('resetHand01');
+	hand01Value.innerHTML = '90';
+	hand01.value = 90;
+});

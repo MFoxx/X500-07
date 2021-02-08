@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X500 - 7</title>
-    <link rel="stylesheet" href="/css/main.css"  type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <h1 class='title'>X500-07</h1>
     <div class="divider"></div>
     <!-- PODSTAVA -->
     <div class="container">
-        <h1>Ovladanie podstavy: <span id="podstavaValue">90</span>°</h1>
+        <h1>Base control: <span id="baseValue">90</span>°</h1>
         <div class="sliderContainer">
-            <input type="range" name="podstava" id="podstava" min=0 max=180 class='slider'>
-            <button id='resetPodstava' class='reset'>Reset</button>
+            <input type="range" name="base" id="base" min=0 max=180 class='slider'>
+            <button id='resetBase' class='reset'>Reset</button>
         </div>
     </div>
 
     <!-- RAMENO 1 -->
     <div class="container">
-        <h1>Ovladanie ramena 1:  <span id="rameno1Value">90</span>°</h1>
+        <h1>Hand 01 control: <span id="hand01Value">90</span>°</h1>
         <div class="sliderContainer">
-            <input type="range" name="rameno1" id="rameno1" min=0 max=180 class='slider'>
-            <button id='resetRameno01' class='reset'>Reset</button>
+            <input type="range" name="hand01V" id="hand01" min=0 max=180 class='slider'>
+            <button id='resetHand01' class='reset'>Reset</button>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src='index.js'></script>
-    
+
 </body>
+
 </html>
